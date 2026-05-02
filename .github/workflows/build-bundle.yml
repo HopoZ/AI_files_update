@@ -1,5 +1,8 @@
 name: Build Bundle Executable
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
