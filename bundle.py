@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
@@ -14,7 +15,10 @@ class CodeBundlerGUI:
         style.configure("TButton", padding=6, font=('Microsoft YaHei', 10))
 
         # --- 配置文件与路径初始化 ---
-        self.script_dir = os.path.dirname(os.path.abspath(__file__))
+        if getattr(sys, 'frozen', False):
+            self.script_dir = os.path.dirname(sys.executable)
+        else:
+            self.script_dir = os.path.dirname(os.path.abspath(__file__))
         self.config_file = os.path.join(self.script_dir, "bundler_config.json")
         self.config = self.load_config() # 读取配置 (如果不存在会在这里自动创建)
         self.output_dir = self.config.get("output_dir", os.path.join(self.script_dir, "outputs"))
