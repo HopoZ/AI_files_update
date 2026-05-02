@@ -2,5 +2,5 @@
     "ignore_dirs": ".git\nnode_modules\ndist\nbuild\nout\nvenv\n__pycache__\n.idea\n.vscode\ncoverage\nstorage\noutputs",
     "ignore_exts": ".png\n.jpg\n.jpeg\n.gif\n.svg\n.ico\n.mp4\n.pdf\n.exe\n.dll\n.so\n.pyc\n.zip\n.tar\n.gz",
     "ignore_files": "package-lock.json\nyarn.lock\npnpm-lock.yaml\npoetry.lock",
-    "output_dir": "e:\\project\\tools\\outputs"
+    "output_dir": "E:/project/tools/AI_files_update/outputs"
 }

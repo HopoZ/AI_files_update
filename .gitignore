@@ -1,1 +1,20 @@
+# Common ignore rules for the tools repository
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.DS_Store
+Thumbs.db
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore build artifacts
+*.exe
+*.egg-info/
+build/
+dist/
 outputs/
+bundle.spec
