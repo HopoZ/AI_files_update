@@ -38,18 +38,18 @@ jobs:
       - name: Build executable with PyInstaller
         working-directory: .
         run: |
-          pyinstaller --onefile --windowed --name bundle bundle.py
+          pyinstaller --onefile --windowed --name bundle --distpath . bundle.py
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: bundle-executable
-          path: dist/bundle.exe
+          path: bundle.exe
 
       - name: Create GitHub release and attach executable
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
-          files: dist/bundle.exe
+          files: bundle.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
